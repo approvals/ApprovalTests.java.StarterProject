@@ -24,4 +24,12 @@ public class Frame {
 		return rolls.get(0) + "," + rolls.get(1);
 	}
 
+	@Override
+	public String toString() {
+		return String.format("%s) %s [%s] = %s", frameNumber, printFrameScores(), getFrameScore(), getTotalScore());
+	}
+
+	public void addRoll(Integer roll) {
+		rolls.add(roll);
+	}
 }
