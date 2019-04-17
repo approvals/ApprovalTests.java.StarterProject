@@ -34,4 +34,9 @@ public class Frame {
 	public void addRoll(Integer roll) {
 		rolls.add(roll);
 	}
+
+	public boolean isSpare() {
+		// TODO Auto-generated method stub
+		return 10 == rolls.get(0) + rolls.get(1);
+	}
 }
