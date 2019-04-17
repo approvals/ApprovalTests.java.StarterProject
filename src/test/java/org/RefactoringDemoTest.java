@@ -32,7 +32,7 @@ public class RefactoringDemoTest {
 		if (n == 0) {
 			return 0;
 		} else if (n == 1) {
-			int fib = (int) Math.round(1);
+			int fib = 1;
 			return fib;
 		} else {
 			double sqrt_5 = 2.2360679775;
