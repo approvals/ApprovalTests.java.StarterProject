@@ -10,7 +10,7 @@ public class Bowling {
 
 	@Override
 	public String toString() {
-		return String.format("%s) 1,1 [2] = 2", frameNumber);
+		return String.format("%s) %s [2] = 2", frameNumber, "1,1");
 	}
 
 }
