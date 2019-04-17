@@ -34,7 +34,6 @@ public class RefactoringDemoTest {
 		} else if (n == 1) {
 			return 1;
 		} else {
-			double sqrt_5 = 2.2360679775;
 			return fibonacci_direct(n - 1) + fibonacci_direct(n - 2);
 		}
 
