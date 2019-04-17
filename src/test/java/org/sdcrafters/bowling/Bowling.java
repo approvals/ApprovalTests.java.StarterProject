@@ -14,7 +14,7 @@ public class Bowling {
 
 	@Override
 	public String toString() {
-		return String.format("%s) %s [%s] = 2", frameNumber, printFrameScores(), getFrameScore());
+		return String.format("%s) %s [%s] = %s", frameNumber, printFrameScores(), getFrameScore(), 2);
 	}
 
 	private int getFrameScore() {
