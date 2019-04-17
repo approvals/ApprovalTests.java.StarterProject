@@ -18,7 +18,7 @@ public class Bowling {
 	}
 
 	private int getTotalScore() {
-		return 2 + 0;
+		return getFrameScore() + 0;
 	}
 
 	private int getFrameScore() {
