@@ -15,7 +15,11 @@ public class Bowling {
 
 	@Override
 	public String toString() {
-		return frames.get(0).toString();
+		StringBuilder text = new StringBuilder();
+		for (Frame frame : frames) {
+			text.append(frame + "\n");
+		}
+		return text.toString();
 	}
 
 }
