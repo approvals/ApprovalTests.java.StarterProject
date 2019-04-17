@@ -8,8 +8,8 @@ public class Bowling {
 	private final int frameNumber = 1;
 
 	public void roll(Integer... rolls) {
-		this.rolls.add(1);
-		this.rolls.add(1);
+		this.rolls.add(rolls[0]);
+		this.rolls.add(rolls[1]);
 	}
 
 	@Override
