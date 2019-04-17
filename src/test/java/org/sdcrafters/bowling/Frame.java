@@ -23,18 +23,20 @@ public class Frame {
 	}
 
 	protected String printFrameScores() {
+
+		int stop = 2;
 		if (frameNumber == 10) {
-			String text = "";
-			for (int i = 0; i < rolls.size(); i++) {
-				text += rolls.get(i) + ",";
-			}
-			return text.substring(0, text.length() - 1);
-		}
-		if (isStrike()) {
-			return "10 ";
+			stop = rolls.size();
+		} else if (isStrike()) {
+			stop = 1;
 		}
 
-		return rolls.get(0) + "," + rolls.get(1);
+		String text = "";
+		for (int i = 0; i < stop; i++) {
+			text += rolls.get(i) + ",";
+		}
+		String endingBuffer = (stop == 1) ? " " : "";
+		return text.substring(0, text.length() - 1) + endingBuffer;
 	}
 
 	@Override
