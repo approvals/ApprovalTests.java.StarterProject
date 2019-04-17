@@ -9,6 +9,7 @@ public class Bowling {
 
 	public void roll(Integer... rolls) {
 		this.rolls.add(1);
+		this.rolls.add(1);
 	}
 
 	@Override
@@ -17,7 +18,7 @@ public class Bowling {
 	}
 
 	private String printFrameScores() {
-		return rolls.get(0) + "," + 1;
+		return rolls.get(0) + "," + rolls.get(1);
 	}
 
 }
