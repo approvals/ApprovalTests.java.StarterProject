@@ -8,7 +8,7 @@ public class Bowling {
 
 	@Override
 	public String toString() {
-		return "1) 1,1 [2] = 2";
+		return String.format("1) 1,1 [2] = 2");
 	}
 
 }
