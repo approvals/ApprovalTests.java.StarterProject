@@ -30,17 +30,28 @@ public class RefactoringDemoTest {
 
 	public int fibonacci_direct(int n) {
 		if (n == 0) {
+			double sqrt_5 = 2.2360679775;
+			double Phi = (1.0 + sqrt_5) / 2.0;
+			double phi = (1.0 - sqrt_5) / 2.0;
 
+			int fib = (int) Math.round((Math.pow(Phi, n) - Math.pow(phi, n)) / sqrt_5);
+			return fib;
 		} else if (n == 1) {
+			double sqrt_5 = 2.2360679775;
+			double Phi = (1.0 + sqrt_5) / 2.0;
+			double phi = (1.0 - sqrt_5) / 2.0;
+
+			int fib = (int) Math.round((Math.pow(Phi, n) - Math.pow(phi, n)) / sqrt_5);
+			return fib;
 		} else {
+			double sqrt_5 = 2.2360679775;
+			double Phi = (1.0 + sqrt_5) / 2.0;
+			double phi = (1.0 - sqrt_5) / 2.0;
 
+			int fib = (int) Math.round((Math.pow(Phi, n) - Math.pow(phi, n)) / sqrt_5);
+			return fib;
 		}
-		double sqrt_5 = 2.2360679775;
-		double Phi = (1.0 + sqrt_5) / 2.0;
-		double phi = (1.0 - sqrt_5) / 2.0;
 
-		int fib = (int) Math.round((Math.pow(Phi, n) - Math.pow(phi, n)) / sqrt_5);
-		return fib;
 	}
 
 }
