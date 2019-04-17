@@ -9,7 +9,7 @@ public class Bowling {
 	public void roll(Integer... rolls) {
 		int previousScore = 0;
 		{
-			Frame frame = new Frame(1, 0);
+			Frame frame = new Frame(1, previousScore);
 			frame.addRoll(rolls[0]);
 			frame.addRoll(rolls[1]);
 			frames.add(frame);
