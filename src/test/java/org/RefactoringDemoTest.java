@@ -35,8 +35,6 @@ public class RefactoringDemoTest {
 			return 1;
 		} else {
 			double sqrt_5 = 2.2360679775;
-			double Phi = (1.0 + sqrt_5) / 2.0;
-			double phi = (1.0 - sqrt_5) / 2.0;
 			return fibonacci_direct(n - 1) + fibonacci_direct(n - 2);
 		}
 
