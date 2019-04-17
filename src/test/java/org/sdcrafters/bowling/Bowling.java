@@ -11,6 +11,10 @@ public class Bowling {
 		frame.addRoll(rolls[0]);
 		frame.addRoll(rolls[1]);
 		frames.add(frame);
+		frame = new Frame();
+		frame.addRoll(rolls[2]);
+		frame.addRoll(rolls[3]);
+		frames.add(frame);
 	}
 
 	@Override
