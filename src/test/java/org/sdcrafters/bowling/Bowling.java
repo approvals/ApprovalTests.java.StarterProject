@@ -1,11 +1,14 @@
 package org.sdcrafters.bowling;
 
+import java.util.ArrayList;
+
 public class Bowling {
 
+	private ArrayList<Integer> rolls = new ArrayList<>();
 	private final int frameNumber = 1;
 
 	public void roll(Integer... rolls) {
-
+		this.rolls.add(1);
 	}
 
 	@Override
@@ -14,7 +17,7 @@ public class Bowling {
 	}
 
 	private String printFrameScores() {
-		return 1 + "," + 1;
+		return rolls.get(0) + "," + 1;
 	}
 
 }
