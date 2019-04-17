@@ -33,7 +33,7 @@ public class RefactoringDemoTest {
 			return 0;
 		} else if (n == 1) {
 			double sqrt_5 = 2.2360679775;
-			int fib = (int) Math.round(((2 * sqrt_5) / 2.0) / sqrt_5);
+			int fib = (int) Math.round(sqrt_5 / sqrt_5);
 			return fib;
 		} else {
 			double sqrt_5 = 2.2360679775;
