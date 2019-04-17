@@ -18,7 +18,7 @@ public class Bowling {
 	}
 
 	private int getFrameScore() {
-		return 2;
+		return rolls.stream().mapToInt(Integer::intValue).sum();
 	}
 
 	private String printFrameScores() {
