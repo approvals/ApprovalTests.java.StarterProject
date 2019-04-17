@@ -14,7 +14,7 @@ public class Bowling {
 	}
 
 	private String printFrameScores() {
-		return "1,1";
+		return "1" + "," + "1";
 	}
 
 }
