@@ -39,10 +39,9 @@ public class RefactoringDemoTest {
 			double phi = (1.0 - sqrt_5) / 2.0;
 			int value1 = n - 1;
 			int fib1 = (int) Math.round((Math.pow(Phi, value1) - Math.pow(phi, value1)) / sqrt_5);
-			int value2 = n - 2;
-			int fib2 = (int) Math.round((Math.pow(Phi, value2) - Math.pow(phi, value2)) / sqrt_5);
+			int fib2 = (int) Math.round((Math.pow(Phi, n - 2) - Math.pow(phi, n - 2)) / sqrt_5);
 
-			return fibonacci_direct(value1) + fibonacci_direct(value2);
+			return fibonacci_direct(value1) + fibonacci_direct(n - 2);
 		}
 
 	}
