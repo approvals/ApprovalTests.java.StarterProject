@@ -23,9 +23,17 @@ public class Frame {
 	}
 
 	protected String printFrameScores() {
+		if (frameNumber == 10) {
+			String text = "";
+			for (int i = 0; i < rolls.size(); i++) {
+				text += rolls.get(i) + ",";
+			}
+			return text.substring(0, text.length() - 1);
+		}
 		if (isStrike()) {
 			return "10 ";
 		}
+
 		return rolls.get(0) + "," + rolls.get(1);
 	}
 
