@@ -34,14 +34,14 @@ public class RefactoringDemoTest {
 			double Phi = (1.0 + sqrt_5) / 2.0;
 			double phi = (1.0 - sqrt_5) / 2.0;
 
-			int fib = (int) Math.round((Math.pow(Phi, 0) - Math.pow(phi, 0)) / sqrt_5);
+			int fib = (int) Math.round((1 - 1) / sqrt_5);
 			return fib;
 		} else if (n == 1) {
 			double sqrt_5 = 2.2360679775;
 			double Phi = (1.0 + sqrt_5) / 2.0;
 			double phi = (1.0 - sqrt_5) / 2.0;
 
-			int fib = (int) Math.round((Math.pow(Phi, 1) - Math.pow(phi, 1)) / sqrt_5);
+			int fib = (int) Math.round((Phi - phi) / sqrt_5);
 			return fib;
 		} else {
 			double sqrt_5 = 2.2360679775;
