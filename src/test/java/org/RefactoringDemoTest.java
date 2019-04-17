@@ -1,15 +1,22 @@
 package org;
 
+import org.approvaltests.Approvals;
+import org.approvaltests.legacycode.Range;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class RefactoringDemoTest {
 
-	@Test
+	// @Test
 	public void test() {
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 46; i++) {
 			Assert.assertEquals(String.format("i=%s", i), fibonacci_direct(i), fibonacci_recursive(i));
 		}
+	}
+
+	@Test
+	public void testName() throws Exception {
+		Approvals.verifyAll("fib", Range.get(1, 46), i -> String.format("%s -> %s", i, fibonacci_direct(i)));
 	}
 
 	public int fibonacci_recursive(int n) {
