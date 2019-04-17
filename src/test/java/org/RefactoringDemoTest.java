@@ -29,6 +29,12 @@ public class RefactoringDemoTest {
 	}
 
 	public int fibonacci_direct(int n) {
+		if (n == 0) {
+
+		} else if (n == 1) {
+		} else {
+
+		}
 		double sqrt_5 = 2.2360679775;
 		double Phi = (1.0 + sqrt_5) / 2.0;
 		double phi = (1.0 - sqrt_5) / 2.0;
