@@ -10,7 +10,7 @@ public class Bowling {
 		int rollIndex = 0;
 		int previousScore = 0;
 		int frameNumber = 1;
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 6; i++) {
 
 			Frame frame = new Frame(frameNumber, previousScore);
 			frame.addRoll(rolls[rollIndex++]);
