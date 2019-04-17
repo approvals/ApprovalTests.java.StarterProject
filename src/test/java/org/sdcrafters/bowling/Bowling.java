@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 public class Bowling {
 
+	private int previousScore = 0;
 	private ArrayList<Integer> rolls = new ArrayList<>();
-	private final int frameNumber = 1;
+	private int frameNumber = 1;
 
 	public void roll(Integer... rolls) {
 		this.rolls.add(rolls[0]);
@@ -18,7 +19,7 @@ public class Bowling {
 	}
 
 	private int getTotalScore() {
-		return getFrameScore() + 0;
+		return getFrameScore() + previousScore;
 	}
 
 	private int getFrameScore() {
