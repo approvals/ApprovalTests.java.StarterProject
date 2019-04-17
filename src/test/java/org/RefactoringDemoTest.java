@@ -42,7 +42,7 @@ public class RefactoringDemoTest {
 			int value2 = n - 2;
 			int fib2 = (int) Math.round((Math.pow(Phi, value2) - Math.pow(phi, value2)) / sqrt_5);
 
-			return fib1 + fibonacci_direct(value2);
+			return fibonacci_direct(value1) + fibonacci_direct(value2);
 		}
 
 	}
