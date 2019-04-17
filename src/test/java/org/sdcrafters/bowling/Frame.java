@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 public class Frame {
 
-	private int previousScore = 0;
 	protected ArrayList<Integer> rolls = new ArrayList<>();
-	protected int frameNumber = 1;
+	private int frameNumber;
+	private int previousScore;
 
-	public Frame() {
+	public Frame(int frameNumber, int previousScore) {
 		super();
+		this.frameNumber = frameNumber;
+		this.previousScore = previousScore;
 	}
 
 	protected int getTotalScore() {

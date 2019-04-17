@@ -7,11 +7,11 @@ public class Bowling {
 	ArrayList<Frame> frames = new ArrayList<>();
 
 	public void roll(Integer... rolls) {
-		Frame frame = new Frame();
+		Frame frame = new Frame(1, 0);
 		frame.addRoll(rolls[0]);
 		frame.addRoll(rolls[1]);
 		frames.add(frame);
-		frame = new Frame();
+		frame = new Frame(2, 2);
 		frame.addRoll(rolls[2]);
 		frame.addRoll(rolls[3]);
 		frames.add(frame);
