@@ -37,8 +37,8 @@ public class RefactoringDemoTest {
 			double sqrt_5 = 2.2360679775;
 			double Phi = (1.0 + sqrt_5) / 2.0;
 			double phi = (1.0 - sqrt_5) / 2.0;
-
-			int fib = (int) Math.round((Math.pow(Phi, n) - Math.pow(phi, n)) / sqrt_5);
+			int value1 = n;
+			int fib = (int) Math.round((Math.pow(Phi, value1) - Math.pow(phi, value1)) / sqrt_5);
 			return fib;
 		}
 
