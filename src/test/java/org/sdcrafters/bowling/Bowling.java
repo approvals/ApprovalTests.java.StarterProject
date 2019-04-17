@@ -13,15 +13,15 @@ public class Bowling {
 			int frameNumber = 1;
 			Frame frame = new Frame(frameNumber, previousScore);
 			frame.addRoll(rolls[rollIndex++]);
-			frame.addRoll(rolls[rollIndex]);
+			frame.addRoll(rolls[rollIndex++]);
 			frames.add(frame);
 			previousScore = frame.getTotalScore();
 		}
 		{
 			int frameNumber = 2;
 			Frame frame = new Frame(frameNumber, previousScore);
-			frame.addRoll(rolls[2]);
-			frame.addRoll(rolls[3]);
+			frame.addRoll(rolls[rollIndex++]);
+			frame.addRoll(rolls[rollIndex++]);
 			frames.add(frame);
 		}
 	}
