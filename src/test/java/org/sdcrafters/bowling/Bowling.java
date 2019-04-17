@@ -8,7 +8,7 @@ public class Bowling {
 
 	public void roll(Integer... rolls) {
 		int rollIndex = 0;
-		int previousScore = rollIndex;
+		int previousScore = 0;
 		int frameNumber = 1;
 		for (int i = 0; i < 5; i++) {
 
@@ -16,12 +16,10 @@ public class Bowling {
 			frame.addRoll(rolls[rollIndex++]);
 			frame.addRoll(rolls[rollIndex++]);
 
-			// if spare
 			if (frame.isSpare()) {
 
 				frame.addRoll(rolls[rollIndex]);
 			}
-			// add 1 more roll
 			frames.add(frame);
 			previousScore = frame.getTotalScore();
 			frameNumber++;

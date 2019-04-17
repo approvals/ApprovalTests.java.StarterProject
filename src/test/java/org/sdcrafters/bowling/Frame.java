@@ -36,7 +36,6 @@ public class Frame {
 	}
 
 	public boolean isSpare() {
-		// TODO Auto-generated method stub
 		return 10 == rolls.get(0) + rolls.get(1);
 	}
 }
