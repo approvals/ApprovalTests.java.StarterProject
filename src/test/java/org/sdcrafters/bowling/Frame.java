@@ -23,6 +23,9 @@ public class Frame {
 	}
 
 	protected String printFrameScores() {
+		if (isStrike()) {
+			return "10 ";
+		}
 		return rolls.get(0) + "," + rolls.get(1);
 	}
 
@@ -37,5 +40,9 @@ public class Frame {
 
 	public boolean isSpare() {
 		return 10 == rolls.get(0) + rolls.get(1);
+	}
+
+	public boolean isStrike() {
+		return 10 == rolls.get(0);
 	}
 }

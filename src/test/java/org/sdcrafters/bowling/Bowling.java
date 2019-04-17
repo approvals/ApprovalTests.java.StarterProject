@@ -14,11 +14,16 @@ public class Bowling {
 
 			Frame frame = new Frame(frameNumber, previousScore);
 			frame.addRoll(rolls[rollIndex++]);
-			frame.addRoll(rolls[rollIndex++]);
-
-			if (frame.isSpare()) {
-
+			if (frame.isStrike()) {
 				frame.addRoll(rolls[rollIndex]);
+				frame.addRoll(rolls[rollIndex + 1]);
+			} else {
+				frame.addRoll(rolls[rollIndex++]);
+
+				if (frame.isSpare()) {
+
+					frame.addRoll(rolls[rollIndex]);
+				}
 			}
 			frames.add(frame);
 			previousScore = frame.getTotalScore();
