@@ -10,15 +10,7 @@ public class Bowling {
 		int rollIndex = 0;
 		int previousScore = rollIndex;
 		int frameNumber = 1;
-		{
-			Frame frame = new Frame(frameNumber, previousScore);
-			frame.addRoll(rolls[rollIndex++]);
-			frame.addRoll(rolls[rollIndex++]);
-			frames.add(frame);
-			previousScore = frame.getTotalScore();
-			frameNumber++;
-		}
-		{
+		for (int i = 0; i < 2; i++) {
 
 			Frame frame = new Frame(frameNumber, previousScore);
 			frame.addRoll(rolls[rollIndex++]);
@@ -27,6 +19,7 @@ public class Bowling {
 			previousScore = frame.getTotalScore();
 			frameNumber++;
 		}
+
 	}
 
 	@Override
