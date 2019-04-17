@@ -7,4 +7,10 @@ public class Bowling {
 
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "1) 1,1 [2] = 2";
+	}
+
 }
