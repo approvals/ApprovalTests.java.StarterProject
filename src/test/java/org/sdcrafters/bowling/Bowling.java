@@ -9,20 +9,23 @@ public class Bowling {
 	public void roll(Integer... rolls) {
 		int rollIndex = 0;
 		int previousScore = rollIndex;
+		int frameNumber = 1;
 		{
-			int frameNumber = 1;
 			Frame frame = new Frame(frameNumber, previousScore);
 			frame.addRoll(rolls[rollIndex++]);
 			frame.addRoll(rolls[rollIndex++]);
 			frames.add(frame);
 			previousScore = frame.getTotalScore();
+			frameNumber++;
 		}
 		{
-			int frameNumber = 2;
+
 			Frame frame = new Frame(frameNumber, previousScore);
 			frame.addRoll(rolls[rollIndex++]);
 			frame.addRoll(rolls[rollIndex++]);
 			frames.add(frame);
+			previousScore = frame.getTotalScore();
+			frameNumber++;
 		}
 	}
 
