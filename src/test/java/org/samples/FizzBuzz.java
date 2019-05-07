@@ -6,12 +6,18 @@ public class FizzBuzz
   {
     String delimiter = ",";
     String result = "";
-    for (int j = 1; j <= 2; j++)
-    {
-      result += j + delimiter;
-    }
     String fizz = "Fizz";
-    result += fizz;
-    return result + ",4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
+    for (int j = 1; j <= 3; j++)
+    {
+      if (j == 3)
+      {
+        result += fizz + delimiter;
+      }
+      else
+      {
+        result += j + delimiter;
+      }
+    }
+    return result + "4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
   }
 }
