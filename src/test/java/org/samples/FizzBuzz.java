@@ -6,12 +6,11 @@ public class FizzBuzz
   {
     String delimiter = ",";
     String result = "";
-    String fizz = "Fizz";
     for (int j = 1; j <= 9; j++)
     {
       if (j % 3 == 0)
       {
-        result += fizz;
+        result += "Fizz";
       }
       else if (j == 5)
       {
