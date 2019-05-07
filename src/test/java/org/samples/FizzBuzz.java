@@ -5,7 +5,7 @@ public class FizzBuzz
   public static String call(int i)
   {
     String result = "";
-    for (int j = 1; j <= 19; j++)
+    for (int j = 1; j <= 20; j++)
     {
       if (j == 15)
       {
@@ -25,6 +25,6 @@ public class FizzBuzz
       }
       result += ",";
     }
-    return result + "Buzz";
+    return result.substring(0, result.length() - 1);
   }
 }
