@@ -11,7 +11,8 @@ public class FizzBuzz
       String r;
       if (j == 15)
       {
-        result += "FizzBuzz";
+        r = "FizzBuzz";
+        result += r;
       }
       else if (j % 3 == 0)
       {
