@@ -5,7 +5,6 @@ public class FizzBuzz
   public static String call(int i)
   {
     String delimiter = ",";
-    String number2 = "" + 2;
     String result = "";
     for (int j = 1; j <= 2; j++)
     {
