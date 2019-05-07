@@ -15,6 +15,7 @@ public class FizzBuzz
       }
       else if (j == 5)
       {
+        result += "Buzz" + delimiter;
       }
       else
       {
