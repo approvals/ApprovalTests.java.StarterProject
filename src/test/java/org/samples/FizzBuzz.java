@@ -12,22 +12,20 @@ public class FizzBuzz
       if (j == 15)
       {
         r = "FizzBuzz";
-        result += r;
       }
       else if (j % 3 == 0)
       {
         r = "Fizz";
-        result += r;
       }
       else if (j % 5 == 0)
       {
         r = "Buzz";
-        result += r;
       }
       else
       {
-        result += j;
+        r = "" + j;
       }
+      result += r;
     }
     return result;
   }
