@@ -5,7 +5,7 @@ public class FizzBuzz
   public static String call(int i)
   {
     String result = "1";
-    for (int j = 2; j <= 20; j++)
+    for (int j = 2; j <= i; j++)
     {
       result += ",";
       if (j == 15)
