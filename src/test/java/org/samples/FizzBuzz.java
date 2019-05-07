@@ -8,6 +8,7 @@ public class FizzBuzz
     for (int j = 2; j <= i; j++)
     {
       result += ",";
+      String r;
       if (j == 15)
       {
         result += "FizzBuzz";
