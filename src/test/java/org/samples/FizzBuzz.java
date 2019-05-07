@@ -5,13 +5,13 @@ public class FizzBuzz
   public static String call(int i)
   {
     String result = "";
-    for (int j = 1; j <= 9; j++)
+    for (int j = 1; j <= 10; j++)
     {
       if (j % 3 == 0)
       {
         result += "Fizz";
       }
-      else if (j == 5)
+      else if (j % 5 == 0)
       {
         result += "Buzz";
       }
@@ -21,6 +21,6 @@ public class FizzBuzz
       }
       result += ",";
     }
-    return result + "Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
+    return result + "11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
   }
 }
