@@ -7,9 +7,9 @@ public class FizzBuzz
     String delimiter = ",";
     String result = "";
     String fizz = "Fizz";
-    for (int j = 1; j <= 8; j++)
+    for (int j = 1; j <= 9; j++)
     {
-      if (j == 3 || j == 6)
+      if (j == 3 || j == 6 || j == 9)
       {
         result += fizz + delimiter;
       }
@@ -22,6 +22,6 @@ public class FizzBuzz
         result += j + delimiter;
       }
     }
-    return result + "Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
+    return result + "Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
   }
 }
