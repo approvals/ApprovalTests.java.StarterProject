@@ -7,6 +7,9 @@ public class FizzBuzz
     String result = "";
     for (int j = 1; j <= 14; j++)
     {
+      if (j == 15)
+      {
+      }
       if (j % 3 == 0)
       {
         result += "Fizz";
