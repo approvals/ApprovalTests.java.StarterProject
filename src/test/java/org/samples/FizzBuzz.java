@@ -11,16 +11,17 @@ public class FizzBuzz
     {
       if (j == 3 || j == 6 || j == 9)
       {
-        result += fizz + delimiter;
+        result += fizz;
       }
       else if (j == 5)
       {
-        result += "Buzz" + delimiter;
+        result += "Buzz";
       }
       else
       {
-        result += j + delimiter;
+        result += j;
       }
+      result += delimiter;
     }
     return result + "Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
   }
