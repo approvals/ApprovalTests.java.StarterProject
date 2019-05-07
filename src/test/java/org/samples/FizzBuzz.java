@@ -16,11 +16,13 @@ public class FizzBuzz
       }
       else if (j % 3 == 0)
       {
-        result += "Fizz";
+        r = "Fizz";
+        result += r;
       }
       else if (j % 5 == 0)
       {
-        result += "Buzz";
+        r = "Buzz";
+        result += r;
       }
       else
       {
