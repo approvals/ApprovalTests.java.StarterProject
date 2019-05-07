@@ -11,6 +11,7 @@ public class FizzBuzz
       result += j + delimiter;
     }
     String fizz = "Fizz";
-    return result + fizz + ",4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
+    result += fizz;
+    return result + ",4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
   }
 }
