@@ -7,7 +7,7 @@ public class FizzBuzz
     String number1 = "" + 1;
     String delimiter = ",";
     String number2 = "" + 2;
-    String result = number1 + delimiter + number2 + delimiter;
+    String result = "" + number1 + delimiter + number2 + delimiter;
     return result + "Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
   }
 }
