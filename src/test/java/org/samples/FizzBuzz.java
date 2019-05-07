@@ -4,7 +4,6 @@ public class FizzBuzz
 {
   public static String call(int i)
   {
-    String delimiter = ",";
     String result = "";
     for (int j = 1; j <= 9; j++)
     {
@@ -20,7 +19,7 @@ public class FizzBuzz
       {
         result += j;
       }
-      result += delimiter;
+      result += ",";
     }
     return result + "Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
   }
