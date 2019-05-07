@@ -21,6 +21,7 @@ public class FizzBuzz
       }
       result += ",";
     }
-    return result + "FizzBuzz,16,17,Fizz,19,Buzz";
+    result += "FizzBuzz" + ",";
+    return result + "16,17,Fizz,19,Buzz";
   }
 }
