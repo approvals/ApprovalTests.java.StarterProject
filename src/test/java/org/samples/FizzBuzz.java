@@ -6,6 +6,8 @@ public class FizzBuzz
   {
     String number1 = "" + 1;
     String delimiter = ",";
-    return number1 + delimiter + "2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
+    String number2 = "2";
+    return number1 + delimiter + number2
+        + ",Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
   }
 }
