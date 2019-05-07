@@ -4,7 +4,6 @@ public class FizzBuzz
 {
   public static String call(int i)
   {
-    String number1 = "" + 1;
     String delimiter = ",";
     String number2 = "" + 2;
     String result = "";
