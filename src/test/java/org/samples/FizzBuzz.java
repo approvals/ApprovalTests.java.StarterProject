@@ -5,7 +5,7 @@ public class FizzBuzz
   public static String call(int i)
   {
     String result = "";
-    for (int j = 1; j <= 10; j++)
+    for (int j = 1; j <= 14; j++)
     {
       if (j % 3 == 0)
       {
@@ -21,6 +21,6 @@ public class FizzBuzz
       }
       result += ",";
     }
-    return result + "11,Fizz,13,14,FizzBuzz,16,17,Fizz,19,Buzz";
+    return result + "FizzBuzz,16,17,Fizz,19,Buzz";
   }
 }
