@@ -13,6 +13,9 @@ public class FizzBuzz
       {
         result += fizz + delimiter;
       }
+      else if (j == 5)
+      {
+      }
       else
       {
         result += j + delimiter;
