@@ -1,0 +1,4 @@
+Selected[0] = c
+Selected[1] = b
+Selected[2] = a
+Selected[3] = d
