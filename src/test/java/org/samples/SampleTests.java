@@ -15,6 +15,7 @@ public class SampleTests
   @Test
   public void testWithApprovalTests()
   {
+    int sc = 225;
     Approvals.verify("Hello World");
   }
   /**
