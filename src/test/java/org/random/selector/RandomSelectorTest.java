@@ -41,6 +41,14 @@ public class RandomSelectorTest
         continue;
       }
       Assert.assertTrue(message, new File(talk.getPath()).exists());
+      if (talk.getPath().contains(" "))
+      {
+        File oldFile = new File(talk.getPath());
+        File newFile = new File(talk.getPath().replace(" ", "_"));
+        oldFile.renameTo(newFile);
+        System.out.println(newFile);
+      }
+      //Assert.assertTrue(message, !talk.getPath().contains(" "));
     }
   }
 }
