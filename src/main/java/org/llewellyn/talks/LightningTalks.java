@@ -40,6 +40,8 @@ public class LightningTalks
                       _("Sustainable Pace", "/Users/llewellyn/Documents/Sustainable_Pace.pptx"),
                       _("Make the Easy Change", "/Users/llewellyn/Documents/Make_the_Easy_Change.pptx"),
                       _("Let's Connect ", "/Users/llewellyn/Documents/Lightning_Talks/Lets_Connect_LinkedIn.pptx"),
+                      _("Provable Undo's",
+                          "/Users/llewellyn/Documents/Lightning_Talks/Provable_Inverse_Refactoring.pptx"),
                       _("Decision trees", "/Users/llewellyn/Documents/Decision_trees.pptx")};
   }
   public static void main(String[] args) throws IOException
