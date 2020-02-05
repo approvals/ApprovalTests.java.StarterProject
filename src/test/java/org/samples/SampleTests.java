@@ -34,6 +34,7 @@ public class SampleTests {
 		Approvals.verifyAsJson(hero);
 	}
 
+
 	@Test
 	public void testName() throws Exception {
 		String file = "/Users/llewellyn/GitHub/MobProgrammingFacilitatorsGuide/MobProgrammingFacilitorsGuide_English.md";
