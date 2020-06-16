@@ -1,6 +1,6 @@
 # ApprovalTests.java.StarterProject
 
-[![Build Status](https://github.com/approvals/ApprovalTests.java.StarterProject/workflows/build/badge.svg?branch=master)](https://github.com/approvals/ApprovalTests.java.StarterProject/actions?query=branch%3Amaster)
+[![Build Status](https://github.com/approvals/ApprovalTests.java.StarterProject/workflows/run%20tests/badge.svg?branch=master)](https://github.com/approvals/ApprovalTests.java.StarterProject/actions?query=run%20tests%3Amaster)
 
 This is a starter project for:
 
@@ -19,7 +19,7 @@ The tests in [SampleTests](https://github.com/approvals/ApprovalTests.java.Start
 
 Notes:
 
-* For more information, see the [ApprovalTests.java User Guide](https://github.com/approvals/ApprovalTests.java/blob/master/doc/README.md#top)
+* For more information, see the [ApprovalTests.java User Guide](https://github.com/approvals/ApprovalTests.Java/blob/master/approvaltests/docs/README.md#top)
 * You will need a Diff tool.
 * Suggestions: 
     * Mac: [DiffMerge](https://sourcegear.com/diffmerge/)
