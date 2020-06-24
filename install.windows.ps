@@ -7,6 +7,7 @@
 
 #install chocolatey
 iwr -useb cin.st | iex
+Set-Service Audiosrv -StartupType Automatic
 
 #install common tools
 choco install -y vscode win-no-annoy git github-desktop anydesk.install googlechrome
