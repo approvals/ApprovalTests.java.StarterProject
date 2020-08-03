@@ -1,5 +1,5 @@
 # To run this script directly, run this in an elevated admin PowerShell prompt:
-#     Invoke-WebRequest -UseBasicParsing https://raw.githubusercontent.com/approvals/ApprovalTests.java.StarterProject/master/install.windows.ps | Invoke-Expression
+#     Invoke-WebRequest -UseBasicParsing https://raw.githubusercontent.com/approvals/ApprovalTests.java.StarterProject/master/install.windows.ps1 | Invoke-Expression
 
 # This script is intended to setup a dev machine from scratch. Very useful for setting up a EC2 instance for mobbing.
 #
