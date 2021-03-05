@@ -1,6 +1,7 @@
 # ApprovalTests.java.StarterProject
 
-[![Build Status](https://github.com/approvals/ApprovalTests.java.StarterProject/workflows/build/badge.svg?branch=master)](https://github.com/approvals/ApprovalTests.java.StarterProject/actions?query=build%3Amaster)
+[![Build Status](../../workflows/build/badge.svg?branch=master)](../../actions?query=build%3Amaster)
+
 
 This is a starter project for:
 
