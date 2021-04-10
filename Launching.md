@@ -1,0 +1,1 @@
+[Launch Me](https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/create/review?templateURL=https://raw.githubusercontent.com/approvals/ApprovalTests.java.StarterProject/master/launch.ec2.yml&stackName=approvaltests-java-starterproject)
