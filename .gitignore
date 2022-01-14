@@ -8,3 +8,4 @@ target
 *.iml
 
 *.received.*
+.DS_Store
