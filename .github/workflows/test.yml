@@ -32,3 +32,24 @@ jobs:
         java-version: ${{ matrix.java }}
     - name: Build with Maven
       run: mvn -B verify --file pom.xml
+  auto-merge:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2.4.0
+      - name: auto-merge
+        if: |
+          github.actor == 'dependabot[bot]' &&
+          github.event_name == 'pull_request'
+        run: |
+          if [[ -z "${GITHUB_TOKEN}" ]]; then
+            gh pr merge --auto --rebase "$PR_URL"
+          else
+            echo 'if you want github to automatically merge pull requests from dependdabot, you need to create a' 
+            echo 'personal access token (public_repo) and assign it to setings -> secrets -> dependabot -> GH_ACTION_TOKEN'
+          fi
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          # this secret needs to be in the settings.secrets.dependabot
+          GITHUB_TOKEN: ${{secrets.GH_ACTION_TOKEN}}
