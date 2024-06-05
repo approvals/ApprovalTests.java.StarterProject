@@ -1,6 +1,5 @@
 package org.samples;
 
-import org.apache.commons.lang3.StringUtils;
 import org.lambda.query.Queryable;
 
 public class LedRing {
@@ -13,12 +12,25 @@ public class LedRing {
 
     }
 
-    public void setLightLevel(int percentage) {
+    public LedRing setLightLevel(int percentage) {
+        int totalLEDs = 16;
 
+        int ledsToLightUp = calculateLEDsToLightUp(totalLEDs, percentage);
+
+        for (int i = 0; i < lights.size(); i++) {
+            lights.get(i).setOn(i < ledsToLightUp);
+//            lights.get(i).setOn(threshold < percentage);
+        }
+        return this;
+    }
+
+    public static int calculateLEDsToLightUp(int totalLEDs, double percentLevel) {
+        double leds = (percentLevel / 100) * totalLEDs;
+        return (int) Math.round(leds);
     }
 
     @Override
     public String toString() {
-        return "["+lights.join(",")+"]";
+        return "[" + lights.join(",") + "]";
     }
 }
