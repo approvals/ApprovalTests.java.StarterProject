@@ -35,9 +35,27 @@ public class LedRingTest {
             90 -> [*,*,*,*,*,*,*,*,*,*,*,*,*,*,-,-]
             95 -> [*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,-]
             100 -> [*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*]
+            50 -> [*,*,*,*,*,*,*,*,-,-,-,-,-,-,-,-]
             """;
         var ring = new LedRing();
         var steps = Range.getAsQueryable(0, 20).select(i -> i * 5);
+        steps.add(50);
+        Approvals.verifyAll(steps, s -> String.format("%s -> %s", s, ring.setLightLevel(s)), new Options().inline(expected));
+    }
+
+    @Test
+    @UseReporter(AutoApproveReporter.class)
+    public void anyPercentageGreaterThanZeroTurnsAtLeastOneLedOn() {
+        var expected = """
+            0 -> [-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-]
+            1 -> [*,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-]
+            2 -> [*,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-]
+            3 -> [*,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-]
+            4 -> [*,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-]
+            5 -> [*,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-]
+            """;
+        var ring = new LedRing();
+        var steps = Range.getAsQueryable(0, 5);
         Approvals.verifyAll(steps, s -> String.format("%s -> %s", s, ring.setLightLevel(s)), new Options().inline(expected));
     }
 }

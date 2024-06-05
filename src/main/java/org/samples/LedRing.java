@@ -16,10 +16,12 @@ public class LedRing {
         int totalLEDs = 16;
 
         int ledsToLightUp = calculateLEDsToLightUp(totalLEDs, percentage);
+        if (percentage > 0) {
+            ledsToLightUp = Math.max(ledsToLightUp, 1);
+        }
 
         for (int i = 0; i < lights.size(); i++) {
             lights.get(i).setOn(i < ledsToLightUp);
-//            lights.get(i).setOn(threshold < percentage);
         }
         return this;
     }
