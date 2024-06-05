@@ -16,9 +16,7 @@ public class LedRing {
         int totalLEDs = 16;
 
         int ledsToLightUp = calculateLEDsToLightUp(totalLEDs, percentage);
-        if (percentage > 0) {
-            ledsToLightUp = Math.max(ledsToLightUp, 1);
-        }
+
 
         for (int i = 0; i < lights.size(); i++) {
             lights.get(i).setOn(i < ledsToLightUp);
@@ -27,8 +25,16 @@ public class LedRing {
     }
 
     public static int calculateLEDsToLightUp(int totalLEDs, double percentLevel) {
+
         double leds = (percentLevel / 100) * totalLEDs;
-        return (int) Math.round(leds);
+
+        var ledsToLightUp = (int) Math.round(leds);
+        if (0 < percentLevel) {
+            ledsToLightUp = Math.max(ledsToLightUp, 1);
+        }
+
+        return ledsToLightUp;
+
     }
 
     @Override
