@@ -37,8 +37,7 @@ jobs:
       with:
         report_paths: '**/target/surefire-reports/*.xml'
         summary: true
-        detailed_summary: true
-        group_suite: true
+        detailed_summary: false
   auto-merge:
     needs: build
     runs-on: ubuntu-latest
