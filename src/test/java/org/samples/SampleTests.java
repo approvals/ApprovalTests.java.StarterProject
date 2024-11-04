@@ -16,7 +16,7 @@ public class SampleTests
   @Test
   public void testWithApprovalTests()
   {
-    Approvals.verify("Bye bye World");
+    Approvals.verify("Hello World");
   }
   /**
     *  note: this requires GSON which is currently added in the pom.xml file. 
