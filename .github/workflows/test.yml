@@ -17,7 +17,7 @@ jobs:
         java: ['8', '21']
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - uses: actions/cache@v4
       with:
         path: ~/.m2/repository
@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: auto-merge
         if: |
           github.actor == 'dependabot[bot]' &&
