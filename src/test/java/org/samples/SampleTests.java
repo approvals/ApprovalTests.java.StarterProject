@@ -7,15 +7,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SampleTests
+class SampleTests
 {
   @Test
-  public void testNormalJunit()
+  void testNormalJunit()
   {
     assertEquals(5, 5);
   }
   @Test
-  public void testWithApprovalTests()
+  void testWithApprovalTests()
   {
     Approvals.verify("Hello World");
   }
@@ -24,7 +24,7 @@ public class SampleTests
     *  This is only required if you want to use the VerifyAsJson.
     **/
   @Test
-  public void testJson()
+  void testJson()
   {
     Person hero = new Person("jayne", "cobb", true, 38);
     JsonApprovals.verifyAsJson(hero);
