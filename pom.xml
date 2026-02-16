@@ -13,8 +13,8 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.15.0</version>
             <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
+                <source>21</source>
+                <target>21</target>
             </configuration>
         </plugin>
         <plugin>
@@ -29,12 +29,7 @@
             <artifactId>approvaltests</artifactId>
             <version>27.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.13.2</version>
-            <scope>test</scope>
-        </dependency>
+        <!-- gson removed to reproduce JPMS issue: https://github.com/approvals/ApprovalTests.Java/issues/770 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
