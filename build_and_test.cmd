@@ -1,2 +1,2 @@
 @echo off
-mvn -B verify --file pom.xml
+mise run build_and_test

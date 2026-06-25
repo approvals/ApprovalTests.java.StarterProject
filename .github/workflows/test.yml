@@ -24,12 +24,11 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
-    - name: Set up JDK
-      uses: actions/setup-java@v5
-      with:
-        distribution: 'zulu'
-        java-version: ${{ matrix.java }}
-    - name: Build with Maven
+    - name: Set Java version for matrix testing
+      run: echo "zulu-${{ matrix.java }}" > .java-version
+      shell: bash
+    - uses: jdx/mise-action@v2
+    - name: Build and Test
       run: ./build_and_test
     - name: Publish Test Report
       uses: mikepenz/action-junit-report@v6
