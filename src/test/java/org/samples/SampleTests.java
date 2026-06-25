@@ -3,6 +3,9 @@ package org.samples;
 
 import org.approvaltests.Approvals;
 import org.approvaltests.JsonApprovals;
+import org.approvaltests.core.Options;
+import org.approvaltests.reporters.AutoApproveReporter;
+import org.approvaltests.reporters.UseReporter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,5 +31,21 @@ class SampleTests
   {
     Person hero = new Person("jayne", "cobb", true, 38);
     JsonApprovals.verifyAsJson(hero);
+  }
+
+   @Test
+   @UseReporter(AutoApproveReporter.class)
+  void testInline()
+  {
+    var expected = """
+      {
+        "firstName": "jayne",
+        "lastName": "cobb",
+        "isMale": true,
+        "age": 38
+      }
+      """;
+    Person hero = new Person("jayne", "cobb", true, 38);
+    JsonApprovals.verifyAsJson(hero, new Options().inline(expected));
   }
 }
