@@ -34,7 +34,6 @@ class SampleTests
   }
 
    @Test
-   @UseReporter(AutoApproveReporter.class)
   void testInline()
   {
     var expected = """
