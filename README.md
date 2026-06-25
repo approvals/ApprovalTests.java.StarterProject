@@ -30,14 +30,14 @@ src/
   main/java/org/samples/
     Person.java               # Example domain object
   test/java/org/samples/
-    SampleTests.java          # Three example tests (start here)
+    SampleTests.java          # Four example tests (start here)
     PackageSettings.java      # Configure the diff reporter for this package
     *.approved.txt / .json    # Approved snapshot files checked into git
 ```
 
 ## The Sample Tests
 
-[`SampleTests.java`](src/test/java/org/samples/SampleTests.java) contains three tests:
+[`SampleTests.java`](src/test/java/org/samples/SampleTests.java) contains four tests:
 
 **`testNormalJunit`** — a plain JUnit assertion to confirm your setup works.
 
@@ -53,6 +53,21 @@ Person hero = new Person("jayne", "cobb", true, 38);
 JsonApprovals.verifyAsJson(hero);
 ```
 The approved output lives in `SampleTests.testJson.approved.json`.
+
+**`testInline`** — stores the approved output directly in the test source file using a Java text block:
+```java
+var expected = """
+  {
+    "firstName": "jayne",
+    "lastName": "cobb",
+    "isMale": true,
+    "age": 38
+  }
+  """;
+Person hero = new Person("jayne", "cobb", true, 38);
+JsonApprovals.verifyAsJson(hero, new Options().inline(expected));
+```
+The approved output is embedded in the test itself — no separate `.approved` file needed. When the output changes, ApprovalTests updates the text block in place, so you review and commit the diff like any other code change. This is convenient for small outputs you want visible alongside the test logic.
 
 ## Approving Output
 

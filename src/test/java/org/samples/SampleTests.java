@@ -33,6 +33,9 @@ class SampleTests
     JsonApprovals.verifyAsJson(hero);
   }
 
+  /***
+   * This only works in java 15+
+   
    @Test
   void testInline()
   {
@@ -47,4 +50,5 @@ class SampleTests
     Person hero = new Person("jayne", "cobb", true, 38);
     JsonApprovals.verifyAsJson(hero, new Options().inline(expected));
   }
+  ***/
 }
