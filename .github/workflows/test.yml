@@ -27,7 +27,7 @@ jobs:
     - name: Set Java version for matrix testing
       run: echo "zulu-${{ matrix.java }}" > .java-version
       shell: bash
-    - uses: jdx/mise-action@v5.0.1
+    - uses: jdx/mise-action@v5.1.1
     - name: Build and Test
       run: ./build_and_test
     - name: Publish Test Report
